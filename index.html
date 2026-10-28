@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>笨蛋工作室 遊戲設計師 張詠竣 名片</title>
+<meta name="description" content="笨蛋工作室 Stupid Particle 遊戲設計師 張詠竣的電子名片。密室逃脫｜企業訓練｜各種活動規劃。">
+<link rel="icon" href="bulb.png">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="張詠竣 Krtun Chang｜笨蛋工作室 遊戲設計師">
+<meta property="og:description" content="密室逃脫｜企業訓練｜各種活動規劃">
+<meta property="og:image" content="https://krtun.github.io/og.jpg">
+<meta property="og:url" content="https://krtun.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@700;900&display=swap">
+<style>
+  /* Layout: the printed card re-staged — spotlight on the studio mark, the card
+     front reproduced as paper at its real 10mm margins, then the actions.
+     Single theme on purpose: these are the studio's print colours. */
+  :root {
+    color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --yellow:        #EEBE2E;
+    --yellow-deep:   #E2B833;
+    --floral:        #FBF7EE;
+    --paper:         #FFFFFF;
+    --gunmetal:      #283442;
+    --gunmetal-soft: #5B6572;
+
+    --sans:  "Noto Sans TC", "PingFang TC", "Heiti TC", system-ui, sans-serif;
+    --latin: "Montserrat", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+    --maru:  "Zen Maru Gothic", "Noto Sans TC", "PingFang TC", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  img { max-width: 100% }
+  [hidden] { display: none !important }
+
+  body {
+    margin: 0;
+    background: var(--yellow-deep);
+    color: var(--gunmetal);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0 36px;
+  }
+  .wrap { max-width: 420px; margin-inline: auto; display: grid; gap: 18px; }
+
+  /* ---- spotlight, lifted from the back of the printed card ---- */
+  .stage { position: relative; height: 190px; overflow: hidden; }
+  .beam {
+    position: absolute; left: 12%; right: 12%; bottom: 34px; height: 266px;
+    background: var(--floral);
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+    animation: lights-on 1.1s ease-out both;
+  }
+  .pool {
+    position: absolute; left: 12%; right: 12%; bottom: 0; height: 68px;
+    background: var(--floral); border-radius: 50%;
+    animation: lights-on 1.1s ease-out both;
+  }
+  @keyframes lights-on {
+    0% { opacity: .5 } 16% { opacity: 1 } 24% { opacity: .68 } 38%, 100% { opacity: 1 }
+  }
+  .logo {
+    position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+    width: 42%; max-width: 160px;
+  }
+
+  .services {
+    margin: 0; text-align: center; color: var(--floral);
+    font-family: var(--maru); font-weight: 700; font-size: 15px; letter-spacing: .12em;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 0;
+  }
+  .services span + span::before { content: "｜"; opacity: .7; letter-spacing: 0 }
+
+  /* ---- the card front, kept at the printed proportions ---- */
+  .card {
+    background: var(--paper); border-radius: 6px;
+    padding: 10mm;
+    box-shadow: 0 16px 34px -20px rgba(40, 52, 66, .45);
+  }
+  .card-inner { container-type: inline-size }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px }
+  .role-zh { font-weight: 700; font-size: max(4.6cqw, 14px); line-height: 1.35; letter-spacing: .08em }
+  .role-en { font-family: var(--latin); font-weight: 500; font-size: max(4.2cqw, 14px); line-height: 1.35 }
+  .bulb {
+    width: 12.7%; flex: none; mix-blend-mode: multiply;
+    transform-origin: 50% 90%; margin-top: -1.5cqw;
+  }
+  .bulb:hover { animation: wiggle .6s ease-in-out }
+  @keyframes wiggle { 30% { transform: rotate(-9deg) } 65% { transform: rotate(7deg) } }
+
+  h1 { margin: 10cqw 0 0; font-weight: 700; font-size: 10cqw; line-height: 1.15; letter-spacing: .02em }
+  h1 .gap { display: inline-block; width: .3em }
+  .name-en {
+    font-family: var(--latin); font-weight: 500;
+    font-size: max(4.2cqw, 14px); line-height: 1.35; margin-top: .6cqw;
+  }
+
+  .contact { list-style: none; margin: 7cqw 0 0; padding: 0; position: relative; z-index: 1 }
+  .contact li { line-height: 1.4 }
+  .contact li.mail { margin-top: 3.8cqw }
+  .contact a {
+    color: var(--gunmetal); text-decoration: none;
+    font-size: max(4cqw, 14px); font-variant-numeric: tabular-nums;
+    border-bottom: 1.5px solid transparent;
+  }
+  .contact a:hover { border-bottom-color: var(--yellow) }
+
+  .figure { display: flex; justify-content: flex-end; margin-top: 7cqw; line-height: 0 }
+  .figure img { width: 70%; display: block; mix-blend-mode: multiply }
+
+  /* ---- actions ---- */
+  .actions { display: grid; grid-template-columns: 1fr auto; gap: 10px }
+  .actions .wide { grid-column: 1 / -1 }
+  .btn {
+    font: inherit; cursor: pointer; border-radius: 999px;
+    border: 2px solid var(--gunmetal);
+    padding: 13px 20px; font-weight: 700; font-size: 16px;
+    letter-spacing: .06em; line-height: 1.4;
+    text-align: center; text-decoration: none;
+    transition: transform .12s ease;
+  }
+  .btn:active { transform: translateY(1px) }
+  .primary   { background: var(--gunmetal); color: var(--floral) }
+  .secondary { background: var(--floral);   color: var(--gunmetal) }
+  .site      { background: var(--yellow);   color: var(--gunmetal) }
+  .site:hover { background: var(--floral) }
+  .ghost {
+    grid-column: 1 / -1; border: none; background: none;
+    color: var(--gunmetal); opacity: .75;
+    font: inherit; font-size: 14px; letter-spacing: .04em;
+    text-decoration: underline; text-underline-offset: 4px;
+    cursor: pointer; padding: 6px;
+  }
+  button:focus-visible, a:focus-visible { outline: 3px solid var(--gunmetal); outline-offset: 3px }
+
+  .foot { text-align: center; color: var(--gunmetal); display: grid; gap: 2px; font-size: 13px }
+  .foot .tax {
+    font-family: var(--latin); font-weight: 500;
+    letter-spacing: .06em; font-variant-numeric: tabular-nums;
+  }
+
+  .toast {
+    position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    transform: translateX(-50%);
+    background: var(--gunmetal); color: var(--floral);
+    padding: 10px 18px; border-radius: 99px; font-size: 14px;
+    max-width: calc(100% - 32px); text-align: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) { .beam, .pool, .bulb:hover { animation: none } }
+  @media (max-width: 370px) {
+    .actions { grid-template-columns: 1fr }
+    .stage { height: 160px }
+  }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="stage" aria-label="笨蛋工作室 Stupid Particle">
+    <div class="beam"></div>
+    <div class="pool"></div>
+    <img class="logo" src="logo.png" alt="Stup!D 笨蛋工作室">
+  </header>
+  <p class="services"><span>密室逃脫</span><span>企業訓練</span><span>各種活動規劃</span></p>
+
+  <article class="card" aria-label="張詠竣的名片">
+   <div class="card-inner">
+    <div class="card-head">
+      <div>
+        <div class="role-zh">遊戲設計師</div>
+        <div class="role-en">Game Designer</div>
+      </div>
+      <img class="bulb" src="bulb.png" alt="">
+    </div>
+    <h1>張<span class="gap"></span>詠竣</h1>
+    <div class="name-en">Krtun Chang</div>
+    <ul class="contact">
+      <li><a href="tel:+886423211671" aria-label="工作室電話 04-23211671">04-23211671</a></li>
+      <li><a href="tel:+886981331103" aria-label="手機 0981-331103">0981-331103</a></li>
+      <li class="mail"><a href="mailto:stupidparticle.tc@gmail.com">stupidparticle.tc@gmail.com</a></li>
+    </ul>
+    <div class="figure">
+      <img src="character.png" alt="張詠竣的插畫頭像，衣服圖樣是 QR Code">
+    </div>
+   </div>
+  </article>
+
+  <div class="actions">
+    <button class="btn primary" id="save" type="button">加入聯絡人</button>
+    <button class="btn secondary" id="share" type="button">分享</button>
+    <a class="btn site wide" href="https://stupidparticle.com/" target="_blank" rel="noopener">進入笨蛋官網</a>
+    <button class="ghost" id="copy" type="button">下載沒反應？改成複製名片資料</button>
+  </div>
+
+  <footer class="foot">
+    <div>笨蛋工作室 Stupid Particle</div>
+    <div class="tax">統一編號 47420995</div>
+  </footer>
+</main>
+
+<script>
+  var FILE_NAME = "Krtun_Chang.vcf";
+
+  var VCARD = [
+    "BEGIN:VCARD", "VERSION:3.0",
+    "N:張;詠竣;;;",
+    "FN:張詠竣 Krtun Chang",
+    "ORG:笨蛋工作室 Stupid Particle",
+    "TITLE:遊戲設計師 Game Designer",
+    "TEL;TYPE=WORK,VOICE:+886-4-2321-1671",
+    "TEL;TYPE=CELL:+886-981-331103",
+    "EMAIL;TYPE=WORK:stupidparticle.tc@gmail.com",
+    "URL:https://stupidparticle.com/",
+    "NOTE:密室逃脫｜企業訓練｜各種活動規劃",
+    "END:VCARD"
+  ].join("\r\n");
+
+  function toast(msg) {
+    var t = document.createElement("div");
+    t.className = "toast";
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function () { t.remove(); }, 2600);
+  }
+
+  function copy(text, okMsg) {
+    try {
+      navigator.clipboard.writeText(text).then(
+        function () { toast(okMsg); },
+        function () { toast("複製失敗，請長按選取文字"); }
+      );
+    } catch (e) {
+      toast("複製失敗，請長按選取文字");
+    }
+  }
+
+  document.getElementById("save").addEventListener("click", function () {
+    try {
+      var blob = new Blob(["﻿" + VCARD], { type: "text/vcard;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = FILE_NAME;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    } catch (e) {
+      copy(VCARD, "瀏覽器擋了下載，已改成複製名片資料");
+    }
+  });
+
+  document.getElementById("copy").addEventListener("click", function () {
+    copy(VCARD, "已複製名片資料");
+  });
+
+  document.getElementById("share").addEventListener("click", function () {
+    var url = location.href;
+    try {
+      if (navigator.share) {
+        navigator.share({ title: "笨蛋工作室 遊戲設計師 張詠竣 名片", url: url }).catch(function (e) {
+          if (e && e.name === "AbortError") { return; }
+          copy(url, "已複製名片網址");
+        });
+        return;
+      }
+    } catch (e) {}
+    copy(url, "已複製名片網址");
+  });
+</script>
+</body>
+</html>
