@@ -197,7 +197,7 @@
   </article>
 
   <div class="actions">
-    <button class="btn primary" id="save" type="button">加入聯絡人</button>
+    <a class="btn primary" href="krtun.vcf">加入聯絡人</a>
     <button class="btn secondary" id="share" type="button">分享</button>
     <a class="btn site wide" href="https://stupidparticle.com/" target="_blank" rel="noopener">進入笨蛋官網</a>
     <button class="ghost" id="copy" type="button">下載沒反應？改成複製名片資料</button>
@@ -210,8 +210,9 @@
 </main>
 
 <script>
-  var FILE_NAME = "Krtun_Chang.vcf";
-
+  // 加入聯絡人 is a plain link to the real krtun.vcf file: Safari refuses a
+  // blob download, but handles a served .vcf natively. VCARD here is only the
+  // copy-to-clipboard fallback, and must stay identical to that file.
   var VCARD = [
     "BEGIN:VCARD", "VERSION:3.0",
     "N:張;詠竣;;;",
@@ -244,22 +245,6 @@
       toast("複製失敗，請長按選取文字");
     }
   }
-
-  document.getElementById("save").addEventListener("click", function () {
-    try {
-      var blob = new Blob(["﻿" + VCARD], { type: "text/vcard;charset=utf-8" });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement("a");
-      a.href = url;
-      a.download = FILE_NAME;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
-    } catch (e) {
-      copy(VCARD, "瀏覽器擋了下載，已改成複製名片資料");
-    }
-  });
 
   document.getElementById("copy").addEventListener("click", function () {
     copy(VCARD, "已複製名片資料");
